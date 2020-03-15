@@ -45,7 +45,7 @@ img {
 
 /* Typography */
 h1, h2, h3 { 
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 
@@ -53,14 +53,54 @@ h1 { font-size: var(--fs-h1);}
 h2 { font-size: var(--fs-h2);}
 h3 { font-size: var(--fs-h3);}
 
+
+nav {
+    display: none;
+}
+section {
+    padding: 5em;
+}
+
 .section__title--intro { font-weight: var(--fw-reg);}
 .section__title { 
     margin-bottom: .25em;
 }
 
+.section__title--intro strong {
+    display: block;
+}
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-ascent);
     font-family: var(--ff-secondary);
+    padding: .25em 2em;
+    margin-bottom: 1em;
 }
 
+.intro { 
+    position: relative;
+}
+
+@media (min-width: 600px){
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+    }
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}

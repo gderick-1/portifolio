@@ -84,7 +84,7 @@ header {
 .logo {
     max-width: 100px;
     font-size: var(--fs-h1);
-    
+
 }
 
 .nav {
@@ -124,13 +124,51 @@ header {
     border: 1px solid var(--clr-ascent);
 }
 
+.nav-toggle {
+    padding: .5em;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before{ top: 6px;}
+.hamburger::after { bottom: 6px;}
 /* nav {
     display: none;
 } */
+
+/* End of navigation styling */
+
 section {
     padding: 5em;
 }
-/* Intro section */
+/* Intro section  styling*/
 .section__title--intro { font-weight: var(--fw-reg);}
 .section__title { 
     margin-bottom: .25em;

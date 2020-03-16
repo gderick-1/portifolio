@@ -85,6 +85,7 @@ header {
     max-width: 100px;
     font-size: var(--fs-h1);
     color: var(--clr-ascent);
+    padding: .5em;
 }
 
 .nav {

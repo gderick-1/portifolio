@@ -17,6 +17,8 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+    --bs: .25em .25em .75em rgba(0,0,0, .25),
+            .125em .125em .25em rgba(0,0,0, .15);
 }
 
 @media (min-width: 800px){
@@ -42,7 +44,26 @@ img {
     display: block;
     max-width: 100%;
 }
-
+:focus {
+    outline: 1px solid var(--clr-ascent);
+    outline-offset: 3px;
+}
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-ascent);
+    color: var(--clr-dark);
+    cursor: pointer;
+    font-size: .8em;
+    font-weight: var(--fw-bold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 20ms ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
 /* Typography */
 h1, h2, h3 { 
     line-height: 1;
@@ -60,7 +81,7 @@ nav {
 section {
     padding: 5em;
 }
-
+/* Intro section */
 .section__title--intro { font-weight: var(--fw-reg);}
 .section__title { 
     margin-bottom: .25em;
@@ -80,6 +101,9 @@ section {
 .intro { 
     position: relative;
 }
+.intro__img {
+    box-shadow: var(--bs);
+}
 
 @media (min-width: 600px){
     .intro {
@@ -93,6 +117,8 @@ section {
     .intro__img {
         grid-area: img;
         min-width: 250px;
+        position: relative;
+        z-index: 2;
     }
     .section__subtitle--intro {
         align-self: start;
@@ -102,5 +128,52 @@ section {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
+    }
+}
+/* end of intro section  */
+
+/* My services section */
+
+.my__service {
+    background-color: var(--clr-dark);
+    background-image: url(/img/grayscale-photo-of-computer-laptop-near-white-notebook-and-169573.jpg);
+    color: var(--clr-light);
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: center;
+}
+
+.section__title--service {
+    color: var(--clr-ascent);
+    position: relative;
+}
+.section__title--service::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: .25em auto 1em;
+    background-color: var(--clr-light);
+    opacity: .25;
+}
+
+.service {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+@media (min-width: 800px){
+    .services{
+        display: flex;
+        max-width: 1000px;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
     }
 }

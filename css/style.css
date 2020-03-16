@@ -84,7 +84,7 @@ header {
 .logo {
     max-width: 100px;
     font-size: var(--fs-h1);
-
+    color: var(--clr-ascent);
 }
 
 .nav {
@@ -164,7 +164,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-ascent);
     width: 2em;
     height: 3px;
     border-radius: 1em;

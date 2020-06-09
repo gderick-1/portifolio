@@ -281,8 +281,14 @@ section {
     margin: 0 auto;
 }
 
+/*  */
+
 .services {
     margin-bottom: 4em;
+}
+.service__icons {
+    color: var(--clr-ascent);
+    font-size: 2.5em;
 }
 @media (min-width: 800px){
     .services{
